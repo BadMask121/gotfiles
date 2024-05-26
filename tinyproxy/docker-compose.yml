@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  tinyproxy:
+    image: newnius/tinyproxy
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./tinyproxy.conf:/etc/tinyproxy/tinyproxy.conf:ro
+    restart: unless-stopped
