@@ -46,10 +46,10 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # setup portainer
-docker compose -f ./portainer/docker-compose.yml
+docker compose -f ./portainer/docker-compose.yml up -d
 
 # setup cloudflare tunnel
-docker compose -f ./cloudflare/tunnel/docker-compose.yml
+docker compose -f ./cloudflare/tunnel/docker-compose.yml up -d
 
 # setup tinyproxy
-docker compose -f ./tinyproxy/docker-compose.yml
+docker compose -f ./tinyproxy/docker-compose.yml up -d
