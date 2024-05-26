@@ -50,3 +50,6 @@ docker compose -f ./portainer/docker-compose.yml
 
 # setup cloudflare tunnel
 docker compose -f ./cloudflare/tunnel/docker-compose.yml
+
+# setup tinyproxy
+docker compose -f ./tinyproxy/docker-compose.yml
