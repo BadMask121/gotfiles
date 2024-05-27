@@ -1,4 +1,6 @@
-nginx:
+version: "3.8"
+services:
+  nginx:
     container_name: nginx_proxy
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
