@@ -10,9 +10,7 @@ services:
       - '40443:443' # Public HTTPS Port
       - '40081:81' # Admin Web Port
     volumes:
-      - ./nginx-data:/data
-      - ./nginx-letsencrypt:/etc/letsencrypt
-      - ./nginx-snippets:/snippets:ro
-      # - ./nginx.conf:/data/nginx/proxy_host/2.conf
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
     environment:
       TZ: 'Europe/Berlin'
