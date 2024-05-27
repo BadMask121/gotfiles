@@ -2,7 +2,7 @@ version: "3.8"
 services:
   nginx:
     container_name: nginx_proxy
-    image: 'jlesage/nginx-proxy-manager:latest'
+    image: jlesage/nginx-proxy-manager
     restart: unless-stopped
     ports:
       # These ports are in format <host-port>:<container-port>
@@ -10,9 +10,6 @@ services:
       - '40443:443' # Public HTTPS Port
       - '40081:81' # Admin Web Port
     volumes:
-      - ./nginx-data:/data
-      - ./nginx-letsencrypt:/etc/letsencrypt
-      - ./nginx-snippets:/snippets:ro
-      # - ./nginx.conf:/data/nginx/proxy_host/2.conf
+      - "/docker/appdata/nginx-proxy-manager:/config:rw"
     environment:
       TZ: 'Europe/Berlin'
