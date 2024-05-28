@@ -1,6 +1,7 @@
 version: "3.8"
 services:
   tinyproxy:
+    container_name: tiny_proxy
     image: newnius/tinyproxy
     ports:
       - "8888:8888"
